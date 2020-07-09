@@ -1,0 +1,56 @@
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i,k,le,md,ks;
+	string t,cr,rv;
+	char ex;
+	cin>>t;
+	le=t.length();
+	 
+	cr=t;
+	
+	
+		int key=rand();
+		cout<<key<<endl;
+	
+		
+	for (i=0;i<le;i++)
+	
+	{
+	
+	k=int(t[i])+key-97;
+
+	
+	md=k%26+97;
+	cr[i]=char(md);
+	
+	
+
+    } 
+    rv=cr;
+
+    for (i=0;i<le;i++)
+	
+	{
+	
+	k=int(rv[i])-key-97+26;
+		ks=k%26;
+	while(ks<0)
+	{
+	
+	ks+=26	;
+	
+}
+	md=ks+97;
+	rv[i]=char(md);
+	
+    } 
+
+cout<<"the secret code is:" <<cr<<endl;
+cout<<"the original is:" <<rv<<endl;
+   return 0; 
+}
